@@ -1,0 +1,87 @@
+
+html{
+  overflow-x: hidden;/*vízszintes görgetősáv ne jelenjen meg*/
+}
+
+body{
+    /*background-color: rgb(224, 220, 228);*/
+    overflow-x: hidden;/*a overflow-x: hidden; tulajdonság miatt a vízszintes görgetősáv nem jelenik meg. A szöveg vízszintesen elvágódik a div szélességének megfelelően.*/
+    margin-left: 0;
+    margin-right: 0;
+    background-size: cover;/*A háttérképet úgy méretezi, hogy kitöltse az egész elemet, miközben megőrzi az eredeti arányait. Ez azt jelenti, hogy a háttérkép vagy teljes szélességében vagy teljes magasságában kitölti az elemet, attól függően, hogy melyik irányban nagyobb az aránya.*/
+    background-repeat: round;/*A háttérképet úgy ismétli, hogy a teljes elem kitöltődjön, de az ismétlésnél a kép szélei levágódhatnak.*/
+    background-image: url("Background2.png");
+     
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;/*z-index CSS tulajdonság határozza meg, hogy egy elem melyik rétegben jelenik meg a többi elemhez képest.*/
+    height: 42px;
+    background-color: rgb(236, 239, 234);
+  }
+ 
+.logo{
+    text-align: left;
+    font-size: 20px;
+    color: rgb(4, 112, 39);
+}
+.nav{
+    text-align: center;
+    word-spacing: 250px;
+    left: -100px;
+    height: 80px;
+    margin: -10px;
+   /*position: relative; egy kicsit közelebb kezdi a logohoz. nekem ezzel nem tetszik*/
+}
+
+a{
+  
+  color:blueviolet;
+  font-size: 18px;
+  text-decoration:none;
+  font-family: cursive;
+  margin: 20px;
+  height: 80px;
+  
+}
+a:hover{/*az a elem felé visszük az egeret, akkor fehér színű legyen, húzza alá az elem alatt*/
+  color: rgb(227, 18, 18);
+  text-decoration: underline;
+  text-underline-position:under;
+}
+
+.balra {
+  text-align: center; /* Szöveg középre igazítása */
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  color: black;
+  text-transform: uppercase;
+}
+
+.jobbra {
+  text-align: right;
+  max-width: 30%; /* A tányér maximális szélessége 100% */
+  max-height: 30%; /* A tányér maximális magassága 100% */
+  background-color: white; /* Az ételképek mögötti háttérszín */
+  border-radius: 50%; /* Kör alakú tartomány beállítása */
+  }
+
+.plate-image {
+  width: 110%; /* A kép teljes kör alakú tartományon belüli kitöltéséhez */
+  height: 110%; /* A kép teljes kör alakú tartományon belüli kitöltéséhez */
+  border-radius: 50%; /* A kép kör alakúvá alakítása */
+  position: relative;
+  left: -10%; /* A kép jobb szélétől való kicsi eltolás */
+}
+
+.div1 {
+  display: flex;
+  flex-direction: row-reverse; /* A tartalom rendezése a sorok mentén, de a sorok irányát megfordítva */
+  justify-content: space-between; /* Az elemek elrendezése úgy, hogy az első elem a sor elején, az utolsó elem pedig a sor végén legyen */
+  align-items: center; /* Az elemek középre igazítása a függőleges tengely mentén */
+  margin-top: 40px; /* Példaérték: állítsa be a kívánt felső margót */
+}
