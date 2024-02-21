@@ -10,7 +10,7 @@ body{
     margin-right: 0;
     background-size: cover;/*A háttérképet úgy méretezi, hogy kitöltse az egész elemet, miközben megőrzi az eredeti arányait. Ez azt jelenti, hogy a háttérkép vagy teljes szélességében vagy teljes magasságában kitölti az elemet, attól függően, hogy melyik irányban nagyobb az aránya.*/
     background-repeat: round;/*A háttérképet úgy ismétli, hogy a teljes elem kitöltődjön, de az ismétlésnél a kép szélei levágódhatnak.*/
-    background-image: url("Background2.png");
+    background-image: url("Background22.png");
      
 }
 
@@ -83,5 +83,159 @@ a:hover{/*az a elem felé visszük az egeret, akkor fehér színű legyen, húzz
   flex-direction: row-reverse; /* A tartalom rendezése a sorok mentén, de a sorok irányát megfordítva */
   justify-content: space-between; /* Az elemek elrendezése úgy, hogy az első elem a sor elején, az utolsó elem pedig a sor végén legyen */
   align-items: center; /* Az elemek középre igazítása a függőleges tengely mentén */
-  margin-top: 40px; /* Példaérték: állítsa be a kívánt felső margót */
+  margin-top: 100px; /* Példaérték: állítsa be a kívánt felső margót */
+  margin-bottom: 100px;
+  
 }
+
+
+/*étlap kezdete*/
+
+.menu .box-container{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 25rem);
+  gap:1.5rem;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.menu .box-container .box{
+  background-color: white;
+  border-radius: .5rem;
+  padding:2rem;
+  text-align: center;
+  box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+  position: relative;
+}
+
+.menu .box-container .box img{
+  width: 100%;
+  margin-bottom: 1rem;
+  
+}
+
+.menu .box-container .box .price{
+  background-color: white;
+  border-radius: .5rem;
+  font-size: 1.7rem;
+  color:black;
+  position: absolute;
+  top:1rem; left:1rem;
+}
+
+
+.menu .box-container .box .name{
+  font-size: 2rem;
+  color:black;
+  margin:.5rem 0;
+}
+
+.menu .box-container .box form{
+  display: flex;
+  gap:6rem;
+  width: 4rem;
+}
+
+.menu .box-container .box form .qty{
+  width: 4rem;
+  padding:1rem;
+  margin-top: 1rem;
+  border-radius: .5rem;
+  font-size: 1.4rem;
+  color:black;
+}
+.menu .box-container .box form .btn{
+  width: 8rem;
+  padding:1rem;
+  margin-top: 1rem;
+  border-radius: .5rem;
+  font-size: 1.4rem;
+  color:black;
+}
+
+
+
+/*étlap vége*/
+
+/*rólunk rész formázása kezdete*/
+
+.container {
+  display: flex;
+}
+
+.balra2 {
+  padding: 10px;
+  width: 25%;
+  float: left;
+}
+
+.jobbra2 {
+  padding: 10px;
+  width: 60%;
+  float: right;
+}
+
+.kepecske {
+  width: 60%;
+  height: 60%;
+}
+
+.text {
+  font-size: 18px;
+  line-height: 1.5;
+  text-align: justify;
+  font-family: cursive;
+}
+
+/*rólunk rész formázása vége*/
+
+
+
+
+/*kapcsolat rész formázás kezdete*/
+
+.footer .box-container {
+  padding: 10px;
+  height: 300px;
+  display: flex; /* A flexbox elrendezési modellt alkalmazzuk */
+  flex-wrap: nowrap; /* Az elemek ne csomagolódjanak át a következő sorba */
+  gap: 1.5rem; /* A távolság az elemek között */
+}
+
+.footer .box {
+  flex: 1; /* Az elemek egyenlően oszlanak el a rendelkezésre álló helyen belül */
+}
+
+.footer .box-container .box {
+  padding: 2rem;
+  text-align: center;
+  background-color: white;
+  box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+  border-radius: .9rem;
+}
+
+.footer .box-container .box i {
+  height: 5rem;
+  width: 5rem;
+  line-height:5rem;
+  font-size: 2rem;
+  color: white;
+  background-color: rgb(5, 127, 105);
+  border-radius: 50%;
+  margin-bottom: .5rem;
+}
+
+.footer .box-container .box h3 {
+  margin: 1rem 0;
+  color: black;
+  text-transform: capitalize;
+  font-size: 2rem;
+}
+
+.footer .box-container .box p {
+  line-height: 2;
+  font-size: 1.6rem;
+  color:black;
+}
+
+/*kapcsolat rész formázás vége*/
