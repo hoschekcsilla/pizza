@@ -133,12 +133,16 @@ document.addEventListener("DOMContentLoaded", function () {
 function updateTotal() {
     var total = 0;
     var items = document.querySelectorAll('.kosar-box');
+    console.log(items);
     items.forEach(function(item) {
-        var price = parseInt(item.querySelector('.kosar-ar').innerHTML);
+        var price =  item.querySelector('.kosar-ar').innerText * 1 //parseInt(item.querySelector('.kosar-ar'));
+        console.log("price:",price);
         var quantity = parseInt(item.querySelector('.kosar-mennyiseg').value);
+        console.log(quantity);
         total += price * quantity;
     });
-    document.getElementById('totalAmount').textContent = total + ' Ft';
+    console.log(total);
+    document.getElementById('totalAmount').textContent = total;
 }
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -186,7 +190,7 @@ document.addEventListener("DOMContentLoaded", function () {
             <img src="food1.png" alt="" class="kosar-kep">
             <div class="kosar-reszletek">
                 <div class="kosar-termek-cim">${name}</div>
-                <div class="kosar-ar">${price * quantity} Ft</div>
+                <div class="kosar-ar">${price * quantity}</div>
                 <input type="number" value="${quantity}" class="kosar-mennyiseg">
             </div>
             <i class='bx bxs-trash-alt cart-remove'></i>
